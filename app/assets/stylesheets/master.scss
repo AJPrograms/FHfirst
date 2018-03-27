@@ -1,3 +1,4 @@
+
 @import "bootstrap";
 
 .clear {
@@ -38,6 +39,8 @@
   color: black;
   font-size: 25px;
   border-bottom: 1px solid #dfdfdf;
+  font-family: 'impact_labelregular', sans-serif;
+  font-weight: 200;
 }
 
 header {
@@ -46,4 +49,15 @@ header {
 
 hr {
   clear: both;
+}
+
+h1 {
+  font-family: 'impact_label_reversedregular', sans-serif;
+  font-weight: bold;
+  font-size: 48px;
+  letter-spacing: -2.5px;
+}
+
+h2 {
+  font-family: 'impact_labelregular', sans-serif;
 }
