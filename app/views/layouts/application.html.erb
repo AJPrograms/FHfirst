@@ -22,12 +22,13 @@
           </div>
         <% end %>
       </div>
-      <div class="col-4 slogan">
+      <div class="col-4 col-sm-4 hidden-xs-down slogan">
         Splurting out unsolicited thoughts about technology since 2018
       </div>
-      <div class="col-5 links">
+      <div class="col-5 offset-1 offset-sm-0 col-sm-5 links">
         <!-- Button trigger modal -->
         <%= link_to 'Contribute', '#', data: {toggle: 'modal', target: '#myModal'} %>
+        &nbsp;&nbsp;
         <%= link_to 'About', about_path %>
       </div>
     </header>
@@ -44,8 +45,9 @@
           </div>
           <%= simple_form_for Quote.new do |f| %>
             <div class="modal-body">
-              <%= f.input :saying %>
-              <%= f.input :author %>
+              <%= f.input :saying, label: "What is the saying you want to add?", placeholder: "This is where you type your quote." %>
+              <br />
+              <%= f.input :author, label: "And who said it?", placeholder: "This is where you type your author's name." %>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -72,12 +74,12 @@
     <div class="footer">
       <div class="container">
         <div class="row">
-          <div class="col-6">
+          <div class="col-12 col-sm-6">
             <%= link_to "This isn't enough, I need more...", root_path, class: 'next-quote' %>
           </div>
-          <div class="col-6 footer-blurb">
+          <div class="col-12 col-sm-6 footer-blurb">
             Proudly made in Los Angeles, CA by <a href="http://amandameyer.getforge.io/">Amanda</a><br />
-            want to build your own Splurty Web App - <a href="http://thefirehoseproject.com">Learn to code here</a>
+            Want to build your own Splurty Web App - <a href="http://thefirehoseproject.com">Learn to code here</a>
           </div>
         </div>
       </div>
